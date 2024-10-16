@@ -16,7 +16,10 @@ btn.addEventListener("click", function() {
     const linkdin = document.getElementById("linkdin").value; 
   
     // Validate inputs
-
+    if (!name || !email || !phone || !city || !linkdin) {
+      alert("Please fill in all required fields.");
+      return;
+    }
   
     // Fill resume section
     document.getElementById("r-name").textContent = name;
